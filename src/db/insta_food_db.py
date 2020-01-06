@@ -1,3 +1,4 @@
+import configparser
 import sqlite3
 from datetime import datetime, timedelta
 from sqlite3 import Error
@@ -83,8 +84,10 @@ class Insta_Food_DB:
 
 
 if __name__ == '__main__':
-    db_path = "C:\\Users\\Xavier\\Workspace\\instafood-nyc\\src\\db\\pythonsqlite.db"
-    db = Insta_Food_DB(db_path)
+    # This function is solely used to set up database environement and personal testing
+    config = configparser.ConfigParser()
+    config.read("src/config.ini")
+    db = Insta_Food_DB(config["DEFAULT"]["db_path"])
     db.create_connection()
     '''
     sql_create_followers_table = """-- Followers table
@@ -96,4 +99,4 @@ if __name__ == '__main__':
     '''
     #create_table(conn, sql_create_followers_table)
     #insert_follower(conn, 30)
-    db.retrieve_credentials()
+    print(db.retrieve_credentials())
