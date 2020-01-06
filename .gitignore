@@ -1,0 +1,6 @@
+geckodriver.log
+config.ini
+*.db
+.vscode
+**__pycache__**
+*.pyc

@@ -3,5 +3,5 @@ Instafood-nyc is a instagram bot that scrapes instagram for the best quality foo
 
 ### TASK LIST:
 
-- [ ] Have bot automatically sign into instagram
+- [x] Have bot automatically sign into instagram
 - [ ] Have bot like random pictures based on hashtag
